@@ -1,0 +1,41 @@
+{% extends "news/layout.html" %}
+
+{% block title %}
+    Новости
+{% endblock %}
+{% block content %}
+    {% include 'news/nav.html' %}
+
+
+<div class="row">
+
+    <div class="col-4">
+
+    </div>
+    <div class="col-4">
+        <p>Новости</p>
+        <br>
+    {% for one_news in news %}
+<div class="card" style="width: 18rem;">
+
+  <div class="card-body">
+      <h5 class="card-title">{{one_news.title}}</h5>
+      <h6 class="card-subtitle mb-2 text-body-secondary">{{one_news.short_desc}}</h6>
+      <p class="card-text">{{one_news.content}}</p>
+      <br>
+      <br>
+      <p>{{one_news.pub_date}}</p>
+      <h6>{{one_news.user}}</h6>
+
+  </div>
+
+</div>
+        <br>
+        {% endfor %}
+    </div>
+    <div class="col-4"></div>
+
+
+    </div>
+{% include 'zoratustra/footer.html' %}
+{% endblock %}

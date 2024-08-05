@@ -1,0 +1,13 @@
+{% extends "zoratustra/layout.html" %}
+
+{% block title %}
+    Zoratustra
+{% endblock %}
+{% block content %}
+    {% include 'zoratustra/nav.html' %}
+    <p>{{ caption }}</p>
+    <h1>Как много великих идей, чьё действие подобно кузнечным мехам: от них человек надувается и становится ещё более пустым</h1>
+    <p>Так говорил Zoratustra </p>
+    <a href="/news/">Наши новости</a>
+    {% include 'zoratustra/footer.html' %}
+{% endblock %}

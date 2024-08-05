@@ -1,0 +1,19 @@
+{% load static %}
+    <header class="bg-dark text-white py-3">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-2 text-center mb-2 mb-md-0">
+                    <img src="{% static 'zoratustra/image/billcipher.jpg' %}" alt="мудрость тысячелетий" class="img-fluid rounded-circle" width="100">
+                </div>
+                <div class="col-md-8 text-center">
+                    <span class="h4 logo d-block">Zoratustra</span>
+                </div>
+                <div class="col-md-2 text-center">
+                    <nav class="nav justify-content-center">
+                        <a class="nav-link text-white" href="{% url 'news_home' %}">Главная</a>
+                        <a class="nav-link text-white" href="{% url 'home' %}">Перейти к Zoratustra </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
