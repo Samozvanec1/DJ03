@@ -6,7 +6,7 @@
 {% block content %}
     {% include 'news/nav.html' %}
 
-
+{% if news %}
 <div class="row">
 
     <div class="col-4">
@@ -37,5 +37,10 @@
 
 
     </div>
+
+
+{% else %}
+<h3>Новостей нет</h3>
+{% endif %}
 {% include 'zoratustra/footer.html' %}
 {% endblock %}
