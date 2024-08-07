@@ -1,0 +1,33 @@
+{% extends "news/layout.html" %}
+{% block title %}Добавить новость{% endblock %}
+{% block content %}
+    {% include 'news/nav.html' %}
+    {% if error %}
+    <div class="alert alert-danger text-center" role="alert">
+        {{ error }}
+    </div>
+    {% endif %}
+    <div class="container mt-5">
+        <h1>Добавить новость</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                {{ form.title }}
+            </div>
+            <div class="mb-3">
+                {{ form.short_desc }}
+            </div>
+            <div class="mb-3">
+                {{ form.content }}
+            </div>
+            <div class="mb-3">
+                {{ form.pub_date }}
+            </div>
+            <div class="mb-3">
+                {{ form.user }}
+            </div>
+            <button type="submit" class="btn btn-primary">Добавить</button>
+        </form>
+    </div>
+    {% include 'zoratustra/footer.html' %}
+{% endblock %}
